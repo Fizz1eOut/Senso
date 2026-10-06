@@ -1,0 +1,23 @@
+{
+  "name": "senso-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "nitropack": "^2.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "protobufjs@7.6.6": true,
+    "@google/genai@2.27.0": true
+  }
+}
