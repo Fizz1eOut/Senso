@@ -1,0 +1,159 @@
+:root {
+  --bg-base: #0F0E0D;
+  --bg-surface: #181614;
+  --bg-surface-2: #221F1C;
+  --bg-surface-3: #2A2622;
+
+  --primary-subtle: #241410;
+  --primary-muted: #3A1F18;
+  --primary: #FF6B4A;
+  --primary-hover: #FF8566;
+  --primary-pressed: #E8532F;
+  --on-primary: #1A0B07;
+
+  --accent-subtle: #1F1A3D;
+  --accent-muted: #26204A;
+  --accent: #9B85FF;
+  --accent-hover: #B3A1FF;
+
+  --gradient-brand: linear-gradient(135deg, #FF6B4A 0%, #FF9468 45%, #9B85FF 100%);
+
+  --text-primary: #F5F2EE;
+  --text-secondary: #A8A198;
+  --text-muted: #6F6961;
+  --text-disabled: #4A443E;
+  --text-translation: #B9B2A8;
+
+  --border: #2E2A26;
+  --border-strong: #423C36;
+  --border-focus: #FF6B4A;
+
+  --input-bg: #221F1C;
+  --scrollbar: #3A352F;
+  --overlay: rgba(0, 0, 0, 0.70);
+  --header-bg: rgba(24, 22, 20, 0.70);
+
+  --card-bg: #181614;
+  --card-bg-hover: #1E1B18;
+  --card-border-hover: #423C36;
+  --card-selected-bg: #241410;
+  --card-selected-border: #FF6B4A;
+
+  --chip-bg: #221F1C;
+  --chip-text: #A8A198;
+  --chip-hover: #2A2622;
+
+  --callout-bg: #241410;
+  --callout-border: #3A1F18;
+
+  --favorite: #FF6B4A;
+
+  --success: #4ADE80;
+  --success-subtle: #12301D;
+  --warning: #FBBF24;
+  --warning-subtle: #3A2A0B;
+  --danger: #F87171;
+  --danger-subtle: #3B1616;
+
+  --level-a1: #4ADE80;
+  --level-a2: #A3E635;
+  --level-b1: #FBBF24;
+  --level-b2: #FF6B4A;
+  --level-c1: #9B85FF;
+  --level-c2: #F472B6;
+
+  --status-learning: #FBBF24;
+  --status-review: #9B85FF;
+  --status-learned: #4ADE80;
+
+  --skeleton-base: #221F1C;
+  --skeleton-highlight: #2E2A26;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.50);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.60);
+  --shadow-glow: 0 0 0 3px rgba(255, 107, 74, 0.25);
+  --shadow-glow-brand: 0 8px 40px rgba(255, 107, 74, 0.25);
+}
+
+.light {
+  --bg-base: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-2: #F3EFEA;
+  --bg-surface-3: #EAE4DC;
+
+  --primary-subtle: #FFF3EF;
+  --primary-muted: #FFE9E2;
+  --primary: #FF5A36;
+  --primary-hover: #E8461F;
+  --primary-pressed: #C93A15;
+  --on-primary: #FFFFFF;
+
+  --accent-subtle: #F6F3FF;
+  --accent-muted: #EEE9FF;
+  --accent: #7C5CFF;
+  --accent-hover: #6844F0;
+
+  --gradient-brand: linear-gradient(135deg, #FF5A36 0%, #FF8A5B 45%, #7C5CFF 100%);
+
+  --text-primary: #1C1917;
+  --text-secondary: #78716C;
+  --text-muted: #A8A29E;
+  --text-disabled: #D6D0C8;
+  --text-translation: #6B645D;
+
+  --border: #E7E1D9;
+  --border-strong: #D5CDC2;
+  --border-focus: #FF5A36;
+
+  --input-bg: #FFFFFF;
+  --scrollbar: #D5CDC2;
+  --overlay: rgba(28, 25, 23, 0.45);
+  --header-bg: rgba(255, 255, 255, 0.70);
+
+  --card-bg: #FFFFFF;
+  --card-bg-hover: #FFFFFF;
+  --card-border-hover: #D5CDC2;
+  --card-selected-bg: #FFF3EF;
+  --card-selected-border: #FF5A36;
+
+  --chip-bg: #F3EFEA;
+  --chip-text: #78716C;
+  --chip-hover: #EAE4DC;
+
+  --callout-bg: #FFF3EF;
+  --callout-border: #FFE9E2;
+
+  --favorite: #FF5A36;
+
+  --success: #16A34A;
+  --success-subtle: #DCFCE7;
+  --warning: #D97706;
+  --warning-subtle: #FEF3C7;
+  --danger: #DC2626;
+  --danger-subtle: #FEE2E2;
+
+  --level-a1: #22C55E;
+  --level-a2: #84CC16;
+  --level-b1: #F59E0B;
+  --level-b2: #FF5A36;
+  --level-c1: #7C5CFF;
+  --level-c2: #DB2777;
+
+  --status-learning: #F59E0B;
+  --status-review: #7C5CFF;
+  --status-learned: #16A34A;
+
+  --skeleton-base: #F3EFEA;
+  --skeleton-highlight: #FFFFFF;
+
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-sm: 0 1px 4px rgba(28, 25, 23, 0.06), 0 2px 8px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 8px 24px rgba(28, 25, 23, 0.08), 0 1px 4px rgba(28, 25, 23, 0.04);
+  --shadow-lg: 0 12px 36px rgba(28, 25, 23, 0.10), 0 2px 8px rgba(28, 25, 23, 0.06);
+  --shadow-xl: 0 20px 60px rgba(28, 25, 23, 0.12), 0 4px 16px rgba(28, 25, 23, 0.08);
+  --shadow-glow: 0 0 0 3px rgba(255, 90, 54, 0.20);
+  --shadow-glow-brand: 0 8px 32px rgba(255, 90, 54, 0.28);
+}
