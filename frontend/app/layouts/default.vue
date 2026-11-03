@@ -28,9 +28,7 @@
   @media (max-width: 768px) {
     .layout {
       grid-template-columns: 1fr;
-    }
-    .layout__main {
-      padding-bottom: calc(var(--tab-bar-height, 56px) + env(safe-area-inset-bottom));
+      height: 100%;
     }
   }
 </style>
