@@ -28,6 +28,7 @@ export interface Example {
 export interface DictionaryEntryRow {
   word: string
   short_translation: string
+  transcription: string | null
   level: string
   frequency: number
   style: string
@@ -37,11 +38,13 @@ export interface DictionaryEntryRow {
   word_family: WordFamilyItem[]
   examples: Example[]
   key_takeaway: string
+  audio_url: string | null 
 }
 
 export interface DictionaryEntry {
   word: string
   shortTranslation: string
+  transcription: string | null
   level: string
   frequency: number
   style: string
@@ -51,4 +54,7 @@ export interface DictionaryEntry {
   wordFamily: WordFamilyItem[]
   examples: Example[]
   keyTakeaway: string
+  audio_url: string | null 
 }
+
+export type GeminiEntry = Omit<DictionaryEntry, 'audioUrl'>
