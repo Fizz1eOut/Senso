@@ -12,6 +12,7 @@ Provide a rich dictionary entry in Russian for a learner. Follow these rules:
 - level: CEFR level (A1-C2) of this word
 - frequency: how common the word is in everyday English, 1 (rare) to 10 (very common)
 - style: register of the word (Neutral, Formal, Informal, Slang, Literary)
+- transcription: IPA transcription of the word in slashes, e.g. /ˈfænsi/. If the input is a phrase, transcribe the whole phrase. Do not add anything except the transcription itself.
 - meanings: 2-5 core usage patterns of the word, each with the grammatical pattern (e.g. "involve someone"), its Russian translation, and one natural English example sentence with its Russian translation
 - collocations: 3-8 common short collocations/phrases with this word and their Russian translation
 - allTranslations: group of translation lists, grouped by form (e.g. base word, and any key fixed expression like "be involved in"), each with a list of Russian translation options

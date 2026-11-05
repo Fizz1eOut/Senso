@@ -2,15 +2,24 @@ export const MINIMAL_SCHEMA = {
   type: 'object',
   properties: {
     word: { type: 'string' },
+    transcription: { type: 'string' },
     shortTranslation: { type: 'string' },
   },
-  required: ['word', 'shortTranslation'],
+  required: [
+    'word', 'transcription', 'shortTranslation', 'level', 'frequency', 'style',
+    'meanings', 'collocations', 'allTranslations', 'wordFamily',
+    'examples', 'keyTakeaway',
+  ],
 }
 
 export const RESPONSE_SCHEMA = {
   type: 'object',
   properties: {
     word: { type: 'string' },
+    transcription: {
+      type: 'string',
+      description: 'IPA transcription in slashes, e.g. /ˈfænsi/. Never empty.',
+    },
     shortTranslation: { type: 'string' },
     level: { type: 'string', enum: ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] },
     frequency: { type: 'integer' },

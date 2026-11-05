@@ -6,6 +6,7 @@ const TARGET_LANG = 'ru'
 
 const ENTRY_COLUMNS = [
   'word',
+  'transcription',
   'short_translation',
   'level',
   'frequency',
@@ -16,11 +17,13 @@ const ENTRY_COLUMNS = [
   'word_family',
   'examples',
   'key_takeaway',
+  'audio_url',
 ].join(', ')
 
 function rowToEntry(row: DictionaryEntryRow): DictionaryEntry {
   return {
     word: row.word,
+    transcription: row.transcription,
     shortTranslation: row.short_translation,
     level: row.level,
     frequency: row.frequency,
@@ -31,6 +34,7 @@ function rowToEntry(row: DictionaryEntryRow): DictionaryEntry {
     wordFamily: row.word_family,
     examples: row.examples,
     keyTakeaway: row.key_takeaway,
+    audio_url: row.audio_url,
   }
 }
 
@@ -65,6 +69,7 @@ export async function saveDictionaryEntry(
       source_lang: SOURCE_LANG,
       target_lang: TARGET_LANG,
       word: entry.word,
+      transcription: entry.transcription,
       short_translation: entry.shortTranslation,
       level: entry.level,
       frequency: clampFrequency(entry.frequency),
@@ -75,6 +80,7 @@ export async function saveDictionaryEntry(
       word_family: entry.wordFamily,
       examples: entry.examples,
       key_takeaway: entry.keyTakeaway,
+      audio_url: entry.audio_url,
     },
     {
       onConflict: 'normalized_word,source_lang,target_lang',
