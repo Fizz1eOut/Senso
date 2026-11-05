@@ -8,6 +8,8 @@ import {
   fetchDictionaryEntryFromGemini,
   AllGeminiModelsFailedError,
 } from '../src/services/gemini.service'
+import { fetchAudioUrl } from '../src/services/pronunciation.service'
+import type { DictionaryEntry } from '../src/types/dictionary.types'
 
 export default defineEventHandler(async (event) => {
   const reqId = createRequestId()
@@ -25,7 +27,12 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    const entry = await fetchDictionaryEntryFromGemini(normalized, reqId)
+    const [geminiEntry, audioUrl] = await Promise.all([
+      fetchDictionaryEntryFromGemini(normalized, reqId),
+      fetchAudioUrl(normalized),
+    ])
+
+    const entry: DictionaryEntry = { ...geminiEntry, audio_url: audioUrl }
     await saveDictionaryEntry(normalized, entry)
     return entry
   } catch (error) {
