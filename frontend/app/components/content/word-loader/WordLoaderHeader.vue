@@ -9,7 +9,7 @@
   const FREQ_DOTS = 10;
 
   const chars = computed(() =>
-    Array.from(props.word.trim()).map((c) => (c === ' ' ? ' ' : c)),
+    Array.from(props.word.trim()).map((c) => (c === ' ' ? '\u00A0' : c)),
   );
 </script>
 
@@ -19,7 +19,7 @@
       <span
         v-for="(ch, i) in chars" 
         :key="i" 
-        class="ch"
+        class="word-loader__char"
         :style="{ '--i': i }"
       >
         {{ ch }}
@@ -30,6 +30,13 @@
       <word-loader-bone :width="96" />
       <word-loader-bone shape="circle" :width="14" :height="14" />
     </div>
+
+    <word-loader-bone
+      class="word-loader__translation" 
+      :width="220" 
+      :height="22"
+      :solid="solidTags" 
+    />
 
     <div class="word-loader__tags">
       <div class="word-loader__tag-list">
@@ -68,7 +75,7 @@
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
-  .ch {
+  .word-loader__char {
     display: inline-block;
     animation: wave 1.8s ease-in-out infinite;
     animation-delay: calc(var(--i) * 90ms);
@@ -89,7 +96,9 @@
     gap: var(--gap-sm); 
     margin-top: var(--space-xs); 
   }
-
+  .word-loader__translation { 
+    margin-top: var(--space-sm); 
+  }
   .word-loader__tags {
     display: flex;
     align-items: center;
