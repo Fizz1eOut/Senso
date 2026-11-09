@@ -9,8 +9,9 @@
   import WordLoaderProgress from '~/components/content/word-loader/WordLoaderProgress.vue';
   import WordLoaderSection from '~/components/content/word-loader/WordLoaderSection.vue';
   import WordLoaderTakeaway from '~/components/content/word-loader/WordLoaderTakeaway.vue';
-  import { COPY, SECTIONS, type SectionKey } from '~/composables/word-loader.constants.ts';
+  import { COPY, SECTIONS, type SectionKey } from '~/constants/word-loader.ts';
   import { useWordLoader } from '~/composables/useWordLoader.ts';
+  import { useWordLoaderPairs } from '~/composables/useWordLoaderPairs.ts';
 
   const props = defineProps<{ word: string; ready?: boolean }>();
   const emit = defineEmits<{ complete: [] }>();
@@ -23,8 +24,11 @@
     takeaway: WordLoaderTakeaway,
   };
 
+  const { pairs } = useWordLoaderPairs(toRef(props, 'word'));
+
   const { activeStage, finishing, progress, pair, isSlow, stateOf } = useWordLoader({
     ready: toRef(props, 'ready'),
+    pairs,
     onComplete: () => emit('complete'),
   });
 </script>
