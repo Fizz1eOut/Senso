@@ -2,7 +2,6 @@ import { computed, onBeforeUnmount, onMounted, ref, watch, type Ref } from 'vue'
 import {
   COMPLETE_DELAY_MS,
   FINISH_STEP_MS,
-  PAIRS,
   PAIR_MS,
   PROGRESS_CAP,
   PROGRESS_TAU_S,
@@ -11,14 +10,16 @@ import {
   STAGE_MS,
   TICK_MS,
   type SectionState,
-} from './word-loader.constants';
+  type WordPair,
+} from '~/constants/word-loader.ts';
 
 interface Options {
   ready: Readonly<Ref<boolean | undefined>>;
+  pairs: Readonly<Ref<WordPair[]>>;
   onComplete: () => void;
 }
 
-export function useWordLoader({ ready, onComplete }: Options) {
+export function useWordLoader({ ready, pairs, onComplete }: Options) {
   const elapsedMs = ref(0);
   const activeStage = ref(0);
   const finishing = ref(false);
@@ -70,7 +71,11 @@ export function useWordLoader({ ready, onComplete }: Options) {
       ? 100
       : PROGRESS_CAP * (1 - Math.exp(-elapsedMs.value / 1000 / PROGRESS_TAU_S)),
   );
-  const pair = computed(() => PAIRS[Math.floor(elapsedMs.value / PAIR_MS) % PAIRS.length]);
+  const pair = computed(() => {
+    const list = pairs.value;
+    if (!list.length) return null;
+    return list[Math.floor(elapsedMs.value / PAIR_MS) % list.length] ?? null;
+  });
   const isSlow = computed(() => !finishing.value && elapsedMs.value >= SLOW_AFTER_MS);
 
   function stateOf(index: number): SectionState {

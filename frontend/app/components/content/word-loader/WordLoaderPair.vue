@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { COPY, type WordPair } from '~/composables/word-loader.constants';
+  import { COPY, type WordPair } from '~/constants/word-loader';
   import AppIcon from '~/components/base/AppIcon.vue';
 
   defineProps<{ 
@@ -9,7 +9,6 @@
 
 <template>
   <div class="word-loader__pair">
-    hello the pair is here
     <span class="word-loader__pair-label">{{ COPY.pairLabel }}</span>
     <Transition name="swap" mode="out-in">
       <div :key="pair.en" class="word-loader__pair-row">

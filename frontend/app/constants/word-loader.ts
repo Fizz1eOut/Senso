@@ -23,15 +23,6 @@ export interface WordPair {
   ru: string;
 }
 
-export const PAIRS: WordPair[] = [
-  { en: 'serendipity', ru: 'счастливая случайность' },
-  { en: 'reluctant', ru: 'неохотный' },
-  { en: 'thrive', ru: 'процветать' },
-  { en: 'cozy', ru: 'уютный' },
-  { en: 'break the ice', ru: 'разрядить обстановку' },
-  { en: 'ubiquitous', ru: 'вездесущий' },
-];
-
 export const TICK_MS = 250;
 export const STAGE_MS = 5000;
 export const PAIR_MS = 5000;
@@ -41,3 +32,6 @@ export const COMPLETE_DELAY_MS = 350;
 
 export const PROGRESS_CAP = 95;
 export const PROGRESS_TAU_S = 14;
+
+export const PAIRS_REQUEST_LIMIT = 12;
+export const PAIR_MAX_MEANINGS = 2;

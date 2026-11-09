@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { SectionState } from '~/composables/word-loader.constants';
+  import type { SectionState } from '~/constants/word-loader';
 
   defineProps<{
     label: string;
