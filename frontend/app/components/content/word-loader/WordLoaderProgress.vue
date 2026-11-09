@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { COPY } from '~/composables/word-loader.constants';
+  import { COPY } from '~/constants/word-loader';
 
   defineProps<{ 
     progress: number; slow: boolean 
