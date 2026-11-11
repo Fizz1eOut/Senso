@@ -8,6 +8,7 @@ export const COPY = {
 };
 
 export const SECTIONS = [
+  { key: 'translations', label: 'All translations' },
   { key: 'meanings', label: 'Meanings' },
   { key: 'collocations', label: 'Collocations' },
   { key: 'family', label: 'Word family' },

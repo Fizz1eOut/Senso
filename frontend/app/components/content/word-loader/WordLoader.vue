@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { toRef, type Component } from 'vue';
+  import WordLoaderTranslations from '~/components/content/word-loader/WordLoaderTranslations.vue';
   import WordLoaderCollocations from '~/components/content/word-loader/WordLoaderCollocations.vue';
   import WordLoaderExamples from '~/components/content/word-loader/WordLoaderExamples.vue';
   import WordLoaderFamily from '~/components/content/word-loader/WordLoaderFamily.vue';
@@ -17,6 +18,7 @@
   const emit = defineEmits<{ complete: [] }>();
 
   const SHAPES: Record<SectionKey, Component> = {
+    translations: WordLoaderTranslations,
     meanings: WordLoaderMeanings,
     collocations: WordLoaderCollocations,
     family: WordLoaderFamily,
