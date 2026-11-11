@@ -15,7 +15,14 @@ Provide a rich dictionary entry in Russian for a learner. Follow these rules:
 - transcription: IPA transcription of the word in slashes, e.g. /ˈfænsi/. If the input is a phrase, transcribe the whole phrase. Do not add anything except the transcription itself.
 - meanings: 2-5 core usage patterns of the word, each with the grammatical pattern (e.g. "involve someone"), its Russian translation, and one natural English example sentence with its Russian translation
 - collocations: 3-8 common short collocations/phrases with this word and their Russian translation
-- allTranslations: group of translation lists, grouped by form (e.g. base word, and any key fixed expression like "be involved in"), each with a list of Russian translation options
+- allTranslations: a full overview of Russian translations grouped by part of speech.
+  Create one group for every part of speech the word really functions as, most common first.
+  Start each "form" with the plain English part-of-speech name ("adjective", "verb", "noun", "adverb", "interjection"),
+  optionally followed by a short note in parentheses.
+  Give up to 10 distinct Russian translations per group, most common first, covering different senses.
+  Include only translations that really exist: do not pad a group to reach the limit.
+  For a narrow sense add a short clarification in parentheses, e.g. "скудный (о внешности или обстановке)".
+  Do not repeat the same translation in different groups.
 - wordFamily: related word forms (noun, adjective, adverb, etc.) with short Russian translations
 - examples: 4-6 example sentences (English + Russian), different from the ones already used in meanings
 - keyTakeaway: one short, memorable tip in Russian about the most important thing to remember about this word
