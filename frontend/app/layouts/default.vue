@@ -20,10 +20,6 @@
     grid-template-columns: 230px 1fr;
     height: 100dvh;
   }
-  .layout__main {
-    min-width: 0;
-    overflow: hidden;
-  }
 
   @media (max-width: 768px) {
     .layout {
