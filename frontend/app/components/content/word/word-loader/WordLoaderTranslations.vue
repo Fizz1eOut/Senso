@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import WordLoaderBone from '~/components/content/word-loader/WordLoaderBone.vue';
+  import WordLoaderBone from '~/components/content/word/word-loader/WordLoaderBone.vue';
 
   const groups = [
     { label: 64, hint: 84, items: [64, 72, 80], note: 0 },

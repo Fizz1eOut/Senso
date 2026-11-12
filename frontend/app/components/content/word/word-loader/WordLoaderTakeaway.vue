@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import WordLoaderBone from '~/components/content/word-loader/WordLoaderBone.vue';
+  import WordLoaderBone from '~/components/content/word/word-loader/WordLoaderBone.vue';
 </script>
 
 <template>

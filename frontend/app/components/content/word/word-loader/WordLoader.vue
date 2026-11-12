@@ -1,15 +1,15 @@
 <script setup lang="ts">
   import { toRef, type Component } from 'vue';
-  import WordLoaderTranslations from '~/components/content/word-loader/WordLoaderTranslations.vue';
-  import WordLoaderCollocations from '~/components/content/word-loader/WordLoaderCollocations.vue';
-  import WordLoaderExamples from '~/components/content/word-loader/WordLoaderExamples.vue';
-  import WordLoaderFamily from '~/components/content/word-loader/WordLoaderFamily.vue';
-  import WordLoaderHeader from '~/components/content/word-loader/WordLoaderHeader.vue';
-  import WordLoaderMeanings from '~/components/content/word-loader/WordLoaderMeanings.vue';
-  import WordLoaderPair from '~/components/content/word-loader/WordLoaderPair.vue';
-  import WordLoaderProgress from '~/components/content/word-loader/WordLoaderProgress.vue';
-  import WordLoaderSection from '~/components/content/word-loader/WordLoaderSection.vue';
-  import WordLoaderTakeaway from '~/components/content/word-loader/WordLoaderTakeaway.vue';
+  import WordLoaderTranslations from '~/components/content/word/word-loader/WordLoaderTranslations.vue';
+  import WordLoaderCollocations from '~/components/content/word/word-loader/WordLoaderCollocations.vue';
+  import WordLoaderExamples from '~/components/content/word/word-loader/WordLoaderExamples.vue';
+  import WordLoaderFamily from '~/components/content/word/word-loader/WordLoaderFamily.vue';
+  import WordLoaderHeader from '~/components/content/word/word-loader/WordLoaderHeader.vue';
+  import WordLoaderMeanings from '~/components/content/word/word-loader/WordLoaderMeanings.vue';
+  import WordLoaderPair from '~/components/content/word/word-loader/WordLoaderPair.vue';
+  import WordLoaderProgress from '~/components/content/word/word-loader/WordLoaderProgress.vue';
+  import WordLoaderSection from '~/components/content/word/word-loader/WordLoaderSection.vue';
+  import WordLoaderTakeaway from '~/components/content/word/word-loader/WordLoaderTakeaway.vue';
   import { COPY, SECTIONS, type SectionKey } from '~/constants/word-loader.ts';
   import { useWordLoader } from '~/composables/useWordLoader.ts';
   import { useWordLoaderPairs } from '~/composables/useWordLoaderPairs.ts';

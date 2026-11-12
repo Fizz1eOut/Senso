@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed } from 'vue';
-  import WordLoaderBone from '~/components/content/word-loader/WordLoaderBone.vue';
+  import WordLoaderBone from '~/components/content/word/word-loader/WordLoaderBone.vue';
 
   const props = defineProps<{ word: string; solidTags: boolean; finishing: boolean }>();
 
