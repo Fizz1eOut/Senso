@@ -1,11 +1,14 @@
 import { ref, onBeforeUnmount } from 'vue';
 import { translateWord } from '~/api/translate';
 import { getTranslateErrorMessage } from '~/utils/translate-error';
-import type { DictionaryEntry } from '~/types/word.types';
+import { useWordsStore } from '~/stores/wordsStore';
+import type { DictionaryEntry } from '~/types/word.types';;
 
 const LOADER_DELAY_MS = 250;
 
 export function useTranslate() {
+  const wordsStore = useWordsStore();
+
   const entry = ref<DictionaryEntry | null>(null);
   const errorMessage = ref('');
   const submittedWord = ref('');
@@ -44,6 +47,8 @@ export function useTranslate() {
       errorMessage.value = getTranslateErrorMessage(error);
       return;
     }
+
+    wordsStore.recordSearch(data);
 
     if (showLoader.value) {
       pending = data;
