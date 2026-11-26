@@ -30,6 +30,7 @@
   .word-family__list {
     margin-top: var(--space-xs);
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     gap: 10px;
   }
