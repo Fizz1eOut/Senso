@@ -44,6 +44,14 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-y: auto;
+  }
+}
+
 body {
   background-color: var(--bg-base);
   color: var(--text-primary);

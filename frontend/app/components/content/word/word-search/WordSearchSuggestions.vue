@@ -56,6 +56,7 @@
     box-shadow: var(--shadow-glow);
   }
   .suggestions__group {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;

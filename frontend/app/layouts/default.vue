@@ -17,14 +17,22 @@
 <style scoped>
   .layout {
     display: grid;
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 200px 1fr;
     height: 100dvh;
+  }
+  .layout__main {
+    min-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   @media (max-width: 768px) {
     .layout {
       grid-template-columns: 1fr;
       height: 100%;
+    }
+    .layout__main {
+      padding-bottom: 80px;
     }
   }
 </style>

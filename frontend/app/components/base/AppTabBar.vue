@@ -41,7 +41,8 @@
     border-top: 1px solid var(--border);
     display: none; 
     position: fixed; 
-    inset: auto 0 0; 
+    inset: auto 0 0;
+    z-index: 99;
   }
   .tag__body {
     display: flex;

@@ -6,6 +6,7 @@
   import AppLevelBadge from '~/components/base/AppLevelBadge.vue';
   import type { WordRecord } from '~/types/word-record.types';
   import { formatTime } from '~/utils/format-time';
+  import { useWordsStore } from '~/stores/wordsStore';
 
   interface WordMiniCardProps {
     record: WordRecord
@@ -16,6 +17,8 @@
   const emit = defineEmits<{
     (e: 'select', word: string): void 
   }>();
+
+  const store = useWordsStore();
 </script>
 
 <template>
@@ -28,10 +31,10 @@
               <div class="mini-card__word">{{ record.entry.word }}</div>
               <app-level-badge :level="record.entry.level" />
             </div>
-            <div class="mini-card__favorites">
+            <div class="mini-card__favorites" @click.stop="store.toggleFavorite(record.word)">
               <app-icon 
-                name="star"
-                color="var(--text-secondary)"
+                :name="record.status === 'learning' ? 'star-full' : 'star'"
+                :color="record.status === 'learning' ?  'var(--favorite)' : 'var(--text-secondary)'"
                 size="var(--space-md)"
               />
             </div>
@@ -82,7 +85,7 @@
     transition: background-color var(--transition-base);
     border-radius: var(--radius-full);
   }
-  .mini-card:hover .mini-card__favorites {
+  .mini-card__favorites:hover {
     background-color: var(--bg-surface-3);
   }
   .mini-card__content {
